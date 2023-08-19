@@ -1,0 +1,24 @@
+.card{
+    overflow: hidden;
+}
+.card img{
+    transition: .7s;
+}
+.card:hover h1{
+    color: white;
+}
+.card:hover h3{
+    color: white;
+}
+.card:hover img {
+    transform: scale(1.2); 
+}
+.card:hover{
+    outline: 15px solid #c05134;
+}
+.content{
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+     overflow: hidden;
+}
