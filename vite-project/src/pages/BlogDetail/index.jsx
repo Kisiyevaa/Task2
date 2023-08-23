@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FILE_URL } from "../../constants";
@@ -9,19 +9,19 @@ import { getData } from "../../utils/api";
 
   function BlogDetail() {
     const params = useParams();
-    const [data, setData] = useState({}); // Initialize data as an object, not an array
+    const [data, setData] = useState({}); 
   
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const result = await getData(params.id); // Assuming getData returns a Promise
-          setData(result); // Update the state with the fetched data
+          const result = await getData(params.id); 
+          setData(result); 
         } catch (err) {
           console.log(err);
         }
       };
   
-      fetchData(); // Call the function to fetch data
+      fetchData(); 
     }, [params.id])
   return (
     <div className=" container mx-auto pt-32">
