@@ -17,14 +17,3 @@ export const get = async (url) => {
     return data.data
 }
 
-export const getData = async (id)=>{
-    const blogData= await axios.get(`${API_URL}/blog/${id}`,
-    {
-        headers: {
-            HEADERS
-        }
-    }
-    
-    )
-    return blogData.data
-}

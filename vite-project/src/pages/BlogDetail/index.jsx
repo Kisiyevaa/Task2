@@ -1,8 +1,7 @@
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FILE_URL } from "../../constants";
-import { getData } from "../../utils/api";
+import { getBlogById } from "../../services";
 
 
 
@@ -14,8 +13,8 @@ import { getData } from "../../utils/api";
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const result = await getData(params.id); 
-          setData(result); 
+          const result = await getBlogById(params.id); 
+          setData(result);
         } catch (err) {
           console.log(err);
         }
