@@ -1,3 +1,3 @@
-import Api from '../contants'
-import axios from "axios"
-const getBlog = ()=>{ axios.get(`${Api}`)}
+import { get } from "../utils/api";
+
+export const getBlogs = async (params) => await get(`/blog?pageSize=${params.pageSize}&pageNumber=${params.pageNumber}`);
